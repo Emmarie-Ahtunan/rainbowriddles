@@ -111,34 +111,7 @@ function selectRandomFlag() {
   return randomFlag;
 }
 
-// Set the flag image for the question
-  const flagImage = document.getElementById('flag-image');
-  flagImage.src = randomFlag.filename;
-
-// Randomly assign the correct flag to one of the options
-  const correctOptionIndex = Math.floor(Math.random() * options.length);
-  options[correctOptionIndex].textContent = randomFlag.name;
-  options[correctOptionIndex].dataset.flag = 'correct';
-
-// Assign other flags to the remaining options
-  let flagIndex = 0;
-  for (let i = 0; i < options.length; i++) {
-    if (i !== correctOptionIndex) {
-      options[i].textContent = selectRandomFlag().name;
-      options[i].dataset.flag = 'incorrect';
-    }
-  }
-
-// Function to handle the user's answer
-function checkAnswer(selectedOption) {
-  
-// Get the selected option's flag data
-  const selectedFlag = selectedOption.dataset.flag;
-}
-
-
 // Function to update the flag image and load the flag history
-
 function updateFlagImage() {
   const flagImage = document.getElementById('flag-image');
   const randomFlag = selectRandomFlag();
@@ -167,7 +140,7 @@ function displayFlagHistory(history) {
   historyContainer.textContent = history;
 }
 
- // Function to generate a new question
+// Function to generate a new question
 function generateNewQuestion() {
   const flagQuestion = document.getElementById('flag-question');
   const options = document.getElementsByClassName('option');
@@ -182,12 +155,12 @@ function generateNewQuestion() {
   const flagImage = document.getElementById('flag-image');
   flagImage.src = randomFlag.filename;
 
- // Randomly assign the correct flag to one of the options
+  // Randomly assign the correct flag to one of the options
   const correctOptionIndex = Math.floor(Math.random() * options.length);
   options[correctOptionIndex].textContent = randomFlag.name;
   options[correctOptionIndex].dataset.flag = 'correct';
 
- // Assign other flags to the remaining options
+  // Assign other flags to the remaining options
   let flagIndex = 0;
   for (let i = 0; i < options.length; i++) {
     if (i !== correctOptionIndex) {
@@ -198,11 +171,52 @@ function generateNewQuestion() {
   }
 }
 
-// Call the function to initially generate a new question
-generateNewQuestion();
+// Function to handle the user's answer
+function checkAnswer(selectedOption) {
+  // Get the selected option's flag data
+  const selectedFlag = selectedOption.dataset.flag;
 
+  // Check if the selected option is correct
+  if (selectedFlag === 'correct') {
+    // Get the history file for the flag
+    const flagHistoryFile = selectedOption.dataset.historyFile;
+
+    // Fetch the history file for the flag
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', flagHistoryFile, true);
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState === 4 && xhr.status === 200) {
+        const flagHistory = xhr.responseText;
+        // Display the flag history to the user
+        alert(`Flag History:\n${flagHistory}`);
+      }
+    };
+    xhr.send();
+  }
+
+  // Generate a new question
+  generateNewQuestion();
 }
 
-// Call the function to initially display a random flag and load its history
-updateFlagImage();
-  
+// Add event listeners to the options
+for (let i = 0; i < options.length; i++) {
+  options[i].addEventListener('click', function () {
+    checkAnswer(options[i]);
+  });
+}
+// Get the end game button element
+const endGameButton = document.getElementById('end-game-button');
+
+// Add click event listener to the end game button
+endGameButton.addEventListener('click', endGame);
+
+// Function to end the game
+function endGame() {
+  // Display the "Thank you for playing!" message
+  const messageContainer = document.getElementById('message-container');
+  messageContainer.textContent = "Thank you for playing!";
+
+  // Hide the question container and options
+  const questionContainer = document.getElementById('question-container');
+  questionContainer.style.display = 'none';
+}
