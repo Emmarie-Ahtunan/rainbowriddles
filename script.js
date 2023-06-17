@@ -204,16 +204,3 @@ for (let i = 0; i < options.length; i++) {
     checkAnswer(options[i]);
   });
 }
-
-// Function to end the game
-function endGame() {
-  // Display the "Thank you for playing!" message
-  const messageContainer = document.getElementById('message-container');
-  messageContainer.textContent = "Thank you for playing!";
-
-  // Hide the question container and options
-  const questionContainer = document.getElementById('question-container');
-  questionContainer.style.display = 'none';
-}
-
-
