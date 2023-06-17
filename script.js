@@ -111,7 +111,34 @@ function selectRandomFlag() {
   return randomFlag;
 }
 
+// Set the flag image for the question
+  const flagImage = document.getElementById('flag-image');
+  flagImage.src = randomFlag.filename;
+
+// Randomly assign the correct flag to one of the options
+  const correctOptionIndex = Math.floor(Math.random() * options.length);
+  options[correctOptionIndex].textContent = randomFlag.name;
+  options[correctOptionIndex].dataset.flag = 'correct';
+
+// Assign other flags to the remaining options
+  let flagIndex = 0;
+  for (let i = 0; i < options.length; i++) {
+    if (i !== correctOptionIndex) {
+      options[i].textContent = selectRandomFlag().name;
+      options[i].dataset.flag = 'incorrect';
+    }
+  }
+
+// Function to handle the user's answer
+function checkAnswer(selectedOption) {
+  
+// Get the selected option's flag data
+  const selectedFlag = selectedOption.dataset.flag;
+}
+
+
 // Function to update the flag image and load the flag history
+
 function updateFlagImage() {
   const flagImage = document.getElementById('flag-image');
   const randomFlag = selectRandomFlag();
@@ -140,8 +167,6 @@ function displayFlagHistory(history) {
   historyContainer.textContent = history;
 }
 
-// Function to generate a new question
-function generateNewQuestion() {
  // Function to generate a new question
 function generateNewQuestion() {
   const flagQuestion = document.getElementById('flag-question');
@@ -157,12 +182,12 @@ function generateNewQuestion() {
   const flagImage = document.getElementById('flag-image');
   flagImage.src = randomFlag.filename;
 
-  // Randomly assign the correct flag to one of the options
+ // Randomly assign the correct flag to one of the options
   const correctOptionIndex = Math.floor(Math.random() * options.length);
   options[correctOptionIndex].textContent = randomFlag.name;
   options[correctOptionIndex].dataset.flag = 'correct';
 
-  // Assign other flags to the remaining options
+ // Assign other flags to the remaining options
   let flagIndex = 0;
   for (let i = 0; i < options.length; i++) {
     if (i !== correctOptionIndex) {
