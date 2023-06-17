@@ -2,105 +2,129 @@
 const flags = [
   {
     filename: 'flags/AgenderPrideFlag.png',
-    historyFile: 'history/AgenderPrideFlag.txt'
+    historyFile: 'history/AgenderPrideFlag.txt',
+    name: 'Agender Pride Flag'
   },
   {
     filename: 'flags/AsexualPrideFlag.png',
-    historyFile: 'history/AsexualPrideFlag.txt'
+    historyFile: 'history/AsexualPrideFlag.txt',
+    name: 'Asexual Pride Flag'
   },
   {
     filename: 'flags/BigenderFlag.png',
-    historyFile: 'history/BigenderFlag.txt'
+    historyFile: 'history/BigenderFlag.txt',
+    name: 'Bigender Pride Flag'
   },
   { 
     filename: 'flags/BisexualPrideFlag.png',  
-    historyFile:'history/BisexualPrideFlag.txt'
+    historyFile:'history/BisexualPrideFlag.txt',
+    name: 'Bisexual Pride Flag'
   },
   { 
     filename: 'flags/DemigenderPrideFlag.png',  
-    historyFile:'history/DemigenderPrideFlag.txt'
+    historyFile:'history/DemigenderPrideFlag.txt',
+    name: 'Demigender Pride Flag'
   },
   {
     filename:'flags/DemisexualPrideFlag.png',
-    historyFile: 'history/DemisexualPrideFlag.txt'
+    historyFile: 'history/DemisexualPrideFlag.txt',
+    name: 'Demisexual Pride Flag'
   },
   {
     filename: 'flags/GenderFluidPrideFlag.png',
-    historyFile: 'history/GenderFluidPrideFlag.txt'
+    historyFile: 'history/GenderFluidPrideFlag.txt',
+    name: 'Gender Fluid Pride Flag'
   },
   {
     filename:'flags/GenderQueerPrideFlag.png',
-    historyFile: 'history/GenderFluidPrideFlag.txt'
+    historyFile: 'history/GenderFluidPrideFlag.txt',
+    name: 'Gender Queer Pride Flag'
   },
   {
     filename: 'flags/GilberBakerPrideFlag.png',
-    historyFile: 'history/GilberBakerPrideFlag.txt'
+    historyFile: 'history/GilberBakerPrideFlag.txt',
+    name: 'Gilbert Baker Pride Flag'
   },
   {
     filename:'flags/Intersex-InclusiveProgressPrideFlag.png',
-    historyFile: 'history/Intersex-InclusiveProgressPrideFlag.txt'
+    historyFile: 'history/Intersex-InclusiveProgressPrideFlag.txt',
+    name: 'Intersex-Inclusive Pride Flag'
   },
   {
     filename: 'flags/LesbianPrideFlag.png',
-    historyFile: 'history/LesbianPrideFlag.txt'
+    historyFile: 'history/LesbianPrideFlag.txt',
+    name: 'Lesbian Pride Flag'
   },
   {
     filename: 'flags/Non_BinaryPrideFlag.png',
-    historyFile: 'history/Non_BinaryPrideFlag.txt'
+    historyFile: 'history/Non_BinaryPrideFlag.txt',
+    name: 'Non-Binary Pride Flag'
   },
   {
     filename: 'flags/PansexualPrideFlag.png',
-    historyFile: 'history/PansexualPrideFlag.txt'
+    historyFile: 'history/PansexualPrideFlag.txt',
+    name: 'Pansexual Pride Flag'
   },
   {
     filename: 'flags/PhiladelphiaPrideFlag.png',
-    historyFile: 'history/PhiladelphiaPrideFlag.txt'
+    historyFile: 'history/PhiladelphiaPrideFlag.txt',
+    name: 'Philadelphia Pride Flag'
   },
   {
     filename:'flags/PolyamoryPrideFlag.png',
-    historyFile: 'history/PolyamoryPrideFlag.txt'
+    historyFile: 'history/PolyamoryPrideFlag.txt',
+    name: 'Polyamory Pride Flag'
   },
   {
     filename:'flags/PolysexualPrideFlag.png',
-    historyFile: 'history/PolysexualPrideFlag.txt'
+    historyFile: 'history/PolysexualPrideFlag.txt',
+    name: 'Polysexual Pride Flag'
   },
   {
     filename:'flags/PrideofAfricaFlag.png',
-    historyFile: 'history/PrideofAfricaFlag.text'
+    historyFile: 'history/PrideofAfricaFlag.text',
+    name: 'Pride of Africa Flag'
   },
   {
     filename:'flags/ProgressPrideFlag.png',
-    historyFile: 'history/ProgressPrideFlag.txt'
+    historyFile: 'history/ProgressPrideFlag.txt',
+    name: 'Progress Pride Flag'
   },
 
   {
     filename:'flags/QueerPeopleofColorPrideFlag.png',
-    historyFile: 'history/QueerPeopleofColorPrideFlag.txt'
+    historyFile: 'history/QueerPeopleofColorPrideFlag.txt',
+    name: 'Queer People of Color Pride Flag'
   },
 
   {
     filename:'flags/QueerPrideFlag.png',
-    historyFile: 'history/QueerPrideFlag.png'
+    historyFile: 'history/QueerPrideFlag.png',
+    name: 'Queer Pride Flag'
   },
 
   {
     filename:'flags/TraditionalaPrideFlag.png',
-    historyFile: 'history/TraditionalPrideFlag.txt'
+    historyFile: 'history/TraditionalPrideFlag.txt',
+    name: 'Traditional Pride Flag'
   },
 
   {
     filename:'flags/Trans-InclusiveGayMensPrideFlag.png',
-    historyFile: 'history/Trans-InclusiveGayMensPrideFlag.txt'
+    historyFile: 'history/Trans-InclusiveGayMensPrideFlag.txt',
+    name: 'Trans-Inclusive Gay Mens Pride Flag'
   },
 
   {
     filename:'flags/TransgenderPrideFlag.png',
-    historyFile: 'history/TransgenderPrideFlag.txt'
+    historyFile: 'history/TransgenderPrideFlag.txt',
+    name: 'Transgender Pride Flag'
   },
   
   {
     filename:'flags/TwoSpiritPrideFlag.png',
-    historyFile: 'history/TwoSpiritPrideFlag.txt'
+    historyFile: 'history/TwoSpiritPrideFlag.txt',
+    name: 'Two Spirit Pride Flag'
   }
 ];
 
