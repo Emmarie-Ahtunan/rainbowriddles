@@ -104,6 +104,21 @@ const flags = [
   }
 ];
 
+// An array of flag file objects with filenames and histories
+const flags = [
+  {
+    filename: 'flags/AgenderPrideFlag.png',
+    historyFile: 'history/AgenderPrideFlag.txt',
+    name: 'Agender Pride Flag'
+  },
+  {
+    filename: 'flags/AsexualPrideFlag.png',
+    historyFile: 'history/AsexualPrideFlag.txt',
+    name: 'Asexual Pride Flag'
+  },
+  // Add other flag objects here
+];
+
 // Function to select a random flag
 function selectRandomFlag() {
   const randomIndex = Math.floor(Math.random() * flags.length);
@@ -204,11 +219,6 @@ for (let i = 0; i < options.length; i++) {
     checkAnswer(options[i]);
   });
 }
-// Get the end game button element
-const endGameButton = document.getElementById('end-game-button');
-
-// Add click event listener to the end game button
-endGameButton.addEventListener('click', endGame);
 
 // Function to end the game
 function endGame() {
@@ -220,3 +230,5 @@ function endGame() {
   const questionContainer = document.getElementById('question-container');
   questionContainer.style.display = 'none';
 }
+
+
