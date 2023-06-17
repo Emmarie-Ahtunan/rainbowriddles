@@ -5,4 +5,4 @@ Problem Statement: Limited knowledge and understanding of LGBTQIA+ Pride Flags h
 
 Solution: Rainbow Riddles tackles these challenges by providing an interactive and educational platform that engages players in learning about various pride flags, their meanings, and historical significance. Through gameplay, players enhance their knowledge, reduce misconceptions, and promote accurate representation. The game fosters engagement, collaboration, and celebration of LGBTQIA+ pride flags, creating a sense of unity and stronger community bonds. Rainbow Riddles also offers an age-appropriate platform to introduce children and young adults to LGBTQIA+ pride flags, empowering the next generation with understanding, acceptance, and respect for diversity.
 
-All information about the Pride Flags was found at https://www.hrc.org/resources/lgbtq-pride-flags
+All information about the Pride Flags was found at [Human Rights Campaign: LGBTQ+ Pride Flags](https://www.hrc.org/resources/lgbtq-pride-flags).
