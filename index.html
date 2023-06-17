@@ -1,38 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rainbow Riddles</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-  <header>
-    <h1>Rainbow Riddles</h1>
-  </header>
-
-  <main>
-    <div id="question-container">
-      <h2 id="question">Guess the Flag</h2>
-      <img id="flag-image" src="flags/placeholder.png" alt="Flag Image">
-      <div id="options">
-        <button class="option" onclick="checkAnswer(1)"></button>
-        <button class="option" onclick="checkAnswer(2)"></button>
-        <button class="option" onclick="checkAnswer(3)"></button>
-        <button class="option" onclick="checkAnswer(4)"></button>
+<html>
+  <head>
+    <title>Rainbow Riddles</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <main>
+      <div id="question-container">
+        <h2 id="flag-question">Which Pride Flag is this?</h2>
+        <img id="flag-image" src="" alt="Flag Image">
+        <div id="options">
+          <button class="option"></button>
+          <button class="option"></button>
+          <button class="option"></button>
+          <button class="option"></button>
+        </div>
       </div>
-    </div>
+    </main>
 
-    <div id="result-container">
-      <h2 id="result"></h2>
-      <p id="history"></p>
-      <button id="next-button" onclick="nextQuestion()">Next Question</button>
-    </div>
-  </main>
-
-  <script src="script.js"></script>
-</body>
-
+    <script src="script.js"></script>
+  </body>
 </html>
