@@ -104,21 +104,6 @@ const flags = [
   }
 ];
 
-// An array of flag file objects with filenames and histories
-const flags = [
-  {
-    filename: 'flags/AgenderPrideFlag.png',
-    historyFile: 'history/AgenderPrideFlag.txt',
-    name: 'Agender Pride Flag'
-  },
-  {
-    filename: 'flags/AsexualPrideFlag.png',
-    historyFile: 'history/AsexualPrideFlag.txt',
-    name: 'Asexual Pride Flag'
-  },
-  // Add other flag objects here
-];
-
 // Function to select a random flag
 function selectRandomFlag() {
   const randomIndex = Math.floor(Math.random() * flags.length);
