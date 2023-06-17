@@ -99,8 +99,8 @@ const flags = [
   },
   
   {
-    filename:'flags/Two_SpiritPrideFlag.png',
-    historyFile: 'history/Two_SpiritPrideFlag.txt'
+    filename:'flags/TwoSpiritPrideFlag.png',
+    historyFile: 'history/TwoSpiritPrideFlag.txt'
   }
 ];
 
