@@ -36,19 +36,24 @@ const flags = [
     name: 'Gender Fluid Pride Flag'
   },
   {
-    filename:'flags/GenderQueerPrideFlag.png',
-    historyFile: 'history/GenderFluidPrideFlag.txt',
+    filename:'flags/GenderqueerPrideFlag.png',
+    historyFile: 'history/GenderqueerPrideFlag.txt',
     name: 'Gender Queer Pride Flag'
   },
   {
-    filename: 'flags/GilberBakerPrideFlag.png',
-    historyFile: 'history/GilberBakerPrideFlag.txt',
+    filename: 'flags/GilbertBakerPrideFlag.png',
+    historyFile: 'history/GilbertBakerPrideFlag.txt',
     name: 'Gilbert Baker Pride Flag'
   },
   {
     filename:'flags/Intersex-InclusiveProgressPrideFlag.png',
     historyFile: 'history/Intersex-InclusiveProgressPrideFlag.txt',
     name: 'Intersex-Inclusive Pride Flag'
+  },
+  {
+    filename: 'flags/IntersexPrideFlag.png',
+    historyFile: 'history/IntersexPrideFlag.txt',
+    name: 'Intersex Pride Flag'
   },
   {
     filename: 'flags/LesbianPrideFlag.png',
@@ -104,7 +109,7 @@ const flags = [
   },
 
   {
-    filename:'flags/TraditionalaPrideFlag.png',
+    filename:'flags/TraditionalPrideFlag.png',
     historyFile: 'history/TraditionalPrideFlag.txt',
     name: 'Traditional Pride Flag'
   },
@@ -122,8 +127,8 @@ const flags = [
   },
   
   {
-    filename:'flags/TwoSpiritPrideFlag.png',
-    historyFile: 'history/TwoSpiritPrideFlag.txt',
+    filename:'flags/Two-SpiritPrideFlag.png',
+    historyFile: 'history/Two-SpiritPrideFlag.txt',
     name: 'Two Spirit Pride Flag'
   }
 ];
