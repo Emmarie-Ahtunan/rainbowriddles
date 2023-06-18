@@ -177,8 +177,7 @@ function generateNewQuestion() {
 
   // Set the flag image for the question
   const flagImage = document.getElementById('flag-image');
-  flagImage.src = randomFlag.filemane;
-  
+  flagImage.src = randomFlag.filename;
 
   // Randomly assign the correct flag to one of the options
   const correctOptionIndex = Math.floor(Math.random() * options.length);
