@@ -177,7 +177,8 @@ function generateNewQuestion() {
 
   // Set the flag image for the question
   const flagImage = document.getElementById('flag-image');
-  flagImage.src = randomFlag.filename;
+  flagImage.src = randomFlag.filemane;
+  
 
   // Randomly assign the correct flag to one of the options
   const correctOptionIndex = Math.floor(Math.random() * options.length);
@@ -202,6 +203,7 @@ function checkAnswer(selectedOption) {
 
   // Check if the selected option is correct
   if (selectedFlag === 'correct') {
+   alert('correct')
     // Get the history file for the flag
     const flagHistoryFile = selectedOption.dataset.historyFile;
 
@@ -216,6 +218,8 @@ function checkAnswer(selectedOption) {
       }
     };
     xhr.send();
+  } else {
+    alert('incorrect')
   }
 
   // Generate a new question
