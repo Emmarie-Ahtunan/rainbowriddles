@@ -104,7 +104,7 @@ const flags = [
 
   {
     filename:'flags/QueerPrideFlag.png',
-    historyFile: 'history/QueerPrideFlag.png',
+    historyFile: 'history/QueerPrideFlag.txt',
     name: 'Queer Pride Flag'
   },
 
@@ -132,6 +132,7 @@ const flags = [
     name: 'Two Spirit Pride Flag'
   }
 ];
+
 
 // Function to select a random flag
 function selectRandomFlag() {
@@ -188,13 +189,16 @@ function generateNewQuestion() {
   const correctOptionIndex = Math.floor(Math.random() * options.length);
   options[correctOptionIndex].textContent = randomFlag.name;
   options[correctOptionIndex].dataset.flag = 'correct';
+  options[correctOptionIndex].dataset.historyFile = randomFlag.historyFile;
 
   // Assign other flags to the remaining options
   let flagIndex = 0;
   for (let i = 0; i < options.length; i++) {
     if (i !== correctOptionIndex) {
-      options[i].textContent = flags[flagIndex].name;
+      const flag = flags[flagIndex];
+      options[i].textContent = flag.name;
       options[i].dataset.flag = 'incorrect';
+      options[i].dataset.historyFile = flag.historyFile;
       flagIndex++;
     }
   }
@@ -207,7 +211,6 @@ function checkAnswer(selectedOption) {
 
   // Check if the selected option is correct
   if (selectedFlag === 'correct') {
-   alert('correct')
     // Get the history file for the flag
     const flagHistoryFile = selectedOption.dataset.historyFile;
 
@@ -223,7 +226,7 @@ function checkAnswer(selectedOption) {
     };
     xhr.send();
   } else {
-    alert('incorrect')
+    alert('Incorrect answer');
   }
 
   // Generate a new question
@@ -231,8 +234,12 @@ function checkAnswer(selectedOption) {
 }
 
 // Add event listeners to the options
+const options = document.getElementsByClassName('option');
 for (let i = 0; i < options.length; i++) {
   options[i].addEventListener('click', function () {
     checkAnswer(options[i]);
   });
 }
+
+// Initial setup
+updateFlagImage();
