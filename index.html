@@ -10,16 +10,29 @@
       <div id="question-container">
         <h2 id="flag-question">Which Pride Flag is this?</h2>
         <img id="flag-image" src="" alt="Flag Image">
-    <div id="options">
-      <button class="option" onclick="checkAnswer(this)"></button>
-      <button class="option" onclick="checkAnswer(this)"></button>
-      <button class="option" onclick="checkAnswer(this)"></button>
-      <button class="option" onclick="checkAnswer(this)"></button>
-        </div>
+      </div> <!-- Close the question-container div -->
 
+      <div id="options">
+        <button class="option" onclick="checkAnswer(this)"></button>
+        <button class="option" onclick="checkAnswer(this)"></button>
       </div>
-    </main>
+
+      <div id="history-container"></div>
+
+      <button id="next-question-btn" onclick="generateNewQuestion()">Next Question</button>
+
+    </main> <!-- Close the main tag -->
 
     <script src="script.js"></script>
+
   </body>
 </html>
+
+
+
+
+
+ 
+
+
+
