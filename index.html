@@ -24,6 +24,17 @@
     </main> <!-- Close the main tag -->
 
     <script src="script.js"></script>
+      <script>
+      // Update the flag image dynamically
+      function updateFlagImage() {
+        const flagImage = document.getElementById('flag-image');
+        const randomFlag = selectRandomFlag();
+        flagImage.src = randomFlag.filename;
+      }
+
+      // Call the updateFlagImage function initially
+      updateFlagImage();
+    </script>
 
   </body>
 </html>
