@@ -134,6 +134,16 @@ const flags = [
 ];
 
 
+// An array of flag file objects with filenames and histories
+const flags = [
+  {
+    filename: 'flags/AgenderPrideFlag.png',
+    historyFile: 'history/AgenderPrideFlag.txt',
+    name: 'Agender Pride Flag'
+  },
+  // Add other flag objects here...
+];
+
 // Function to select a random flag
 function selectRandomFlag() {
   const randomIndex = Math.floor(Math.random() * flags.length);
@@ -158,7 +168,6 @@ function loadFlagHistory(filePath) {
     if (xhr.readyState === 4 && xhr.status === 200) {
       const flagHistory = xhr.responseText;
       displayFlagHistory(flagHistory);
-      generateNewQuestion();
     }
   };
   xhr.send();
@@ -179,7 +188,7 @@ function generateNewQuestion() {
   const randomFlag = selectRandomFlag();
 
   // Display the flag question
-  flagQuestion.textContent = `Which flag does this represent?`;
+  flagQuestion.textContent = 'Which flag does this represent?';
 
   // Set the flag image for the question
   const flagImage = document.getElementById('flag-image');
@@ -195,7 +204,7 @@ function generateNewQuestion() {
   let flagIndex = 0;
   for (let i = 0; i < options.length; i++) {
     if (i !== correctOptionIndex) {
-      const flag = flags[flagIndex];
+      const flag = selectRandomFlag();
       options[i].textContent = flag.name;
       options[i].dataset.flag = 'incorrect';
       options[i].dataset.historyFile = flag.historyFile;
@@ -221,17 +230,19 @@ function checkAnswer(selectedOption) {
       if (xhr.readyState === 4 && xhr.status === 200) {
         const flagHistory = xhr.responseText;
         // Display the flag history to the user
-        alert(`Flag History:\n${flagHistory}`);
+        displayFlagHistory(flagHistory);
       }
     };
     xhr.send();
   } else {
-    alert('Incorrect answer');
+    // Display a message indicating an incorrect answer
+    displayFlagHistory('Incorrect answer');
   }
 
   // Generate a new question
   generateNewQuestion();
 }
+
 
 // Add event listeners to the options
 const options = document.getElementsByClassName('option');
