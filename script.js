@@ -133,17 +133,6 @@ const flags = [
   }
 ];
 
-
-// An array of flag file objects with filenames and histories
-const flags = [
-  {
-    filename: 'flags/AgenderPrideFlag.png',
-    historyFile: 'history/AgenderPrideFlag.txt',
-    name: 'Agender Pride Flag'
-  },
-  // Add other flag objects here...
-];
-
 // Function to select a random flag
 function selectRandomFlag() {
   const randomIndex = Math.floor(Math.random() * flags.length);
@@ -204,12 +193,11 @@ function generateNewQuestion() {
   let flagIndex = 0;
   for (let i = 0; i < options.length; i++) {
     if (i !== correctOptionIndex) {
-      const flag = selectRandomFlag();
-      options[i].textContent = flag.name;
-      options[i].dataset.flag = 'incorrect';
-      options[i].dataset.historyFile = flag.historyFile;
-      flagIndex++;
-    }
+    const flag = selectRandomFlag();
+    options[i].textContent = flag.name;
+    options[i].dataset.flag = 'incorrect';
+    options[i].dataset.historyFile = flag.historyFile;
+    flagIndex++;
   }
 }
 
@@ -243,7 +231,6 @@ function checkAnswer(selectedOption) {
   generateNewQuestion();
 }
 
-
 // Add event listeners to the options
 const options = document.getElementsByClassName('option');
 for (let i = 0; i < options.length; i++) {
@@ -254,3 +241,9 @@ for (let i = 0; i < options.length; i++) {
 
 // Initial setup
 updateFlagImage();
+generateNewQuestion();
+
+
+
+
+
