@@ -133,6 +133,16 @@ const flags = [
   }
 ];
 
+// An array of flag file objects with filenames and histories
+const flags = [
+  {
+    filename: 'flags/AgenderPrideFlag.png',
+    historyFile: 'history/AgenderPrideFlag.txt',
+    name: 'Agender Pride Flag'
+  },
+  // ... rest of the flag objects
+];
+
 // Function to select a random flag
 function selectRandomFlag() {
   const randomIndex = Math.floor(Math.random() * flags.length);
@@ -157,6 +167,7 @@ function loadFlagHistory(filePath) {
     if (xhr.readyState === 4 && xhr.status === 200) {
       const flagHistory = xhr.responseText;
       displayFlagHistory(flagHistory);
+      generateNewQuestion();
     }
   };
   xhr.send();
@@ -177,7 +188,7 @@ function generateNewQuestion() {
   const randomFlag = selectRandomFlag();
 
   // Display the flag question
-  flagQuestion.textContent = 'Which flag does this represent?';
+  flagQuestion.textContent = `Which flag does this represent?`;
 
   // Set the flag image for the question
   const flagImage = document.getElementById('flag-image');
@@ -193,11 +204,12 @@ function generateNewQuestion() {
   let flagIndex = 0;
   for (let i = 0; i < options.length; i++) {
     if (i !== correctOptionIndex) {
-    const flag = selectRandomFlag();
-    options[i].textContent = flag.name;
-    options[i].dataset.flag = 'incorrect';
-    options[i].dataset.historyFile = flag.historyFile;
-    flagIndex++;
+      const flag = flags[flagIndex];
+      options[i].textContent = flag.name;
+      options[i].dataset.flag = 'incorrect';
+      options[i].dataset.historyFile = flag.historyFile;
+      flagIndex++;
+    }
   }
 }
 
@@ -218,13 +230,12 @@ function checkAnswer(selectedOption) {
       if (xhr.readyState === 4 && xhr.status === 200) {
         const flagHistory = xhr.responseText;
         // Display the flag history to the user
-        displayFlagHistory(flagHistory);
+        alert(`Flag History:\n${flagHistory}`);
       }
     };
     xhr.send();
   } else {
-    // Display a message indicating an incorrect answer
-    displayFlagHistory('Incorrect answer');
+    alert('Incorrect answer');
   }
 
   // Generate a new question
@@ -241,7 +252,6 @@ for (let i = 0; i < options.length; i++) {
 
 // Initial setup
 updateFlagImage();
-generateNewQuestion();
 
 
 
