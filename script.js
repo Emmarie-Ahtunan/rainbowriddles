@@ -202,6 +202,7 @@ function generateNewQuestion() {
     }
   }
 }
+
 // Function to handle the user's answer
 function checkAnswer(selectedOption) {
   // Get the selected option's flag data
@@ -219,13 +220,15 @@ function checkAnswer(selectedOption) {
       if (xhr.readyState === 4 && xhr.status === 200) {
         const flagHistory = xhr.responseText;
         // Display the flag history to the user
-         alert(`Flag History:\n${flagHistory}`);
-       }
+        displayFlagHistory(flagHistory);
+        alert('Correct answer!');
+      }
     };
     xhr.send();
   } else {
     // Display a message indicating an incorrect answer
-    displayFlagHistory("Incorrect answer");
+    displayFlagHistory('Incorrect answer');
+    alert('Incorrect answer!');
   }
 
   // Generate a new question
@@ -235,15 +238,4 @@ function checkAnswer(selectedOption) {
 // Add event listeners to the options
 const options = document.getElementsByClassName('option');
 for (let i = 0; i < options.length; i++) {
-  options[i].addEventListener('click', function () {
-    checkAnswer(options[i]);
-  });
-}
-
-// Initial setup
-updateFlagImage();
-
-
-
-
-
+  options[i].addEventListener('
