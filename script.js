@@ -133,16 +133,6 @@ const flags = [
   }
 ];
 
-// An array of flag file objects with filenames and histories
-const flags = [
-  {
-    filename: 'flags/AgenderPrideFlag.png',
-    historyFile: 'history/AgenderPrideFlag.txt',
-    name: 'Agender Pride Flag'
-  },
-  // ... rest of the flag objects
-];
-
 // Function to select a random flag
 function selectRandomFlag() {
   const randomIndex = Math.floor(Math.random() * flags.length);
@@ -212,7 +202,6 @@ function generateNewQuestion() {
     }
   }
 }
-
 // Function to handle the user's answer
 function checkAnswer(selectedOption) {
   // Get the selected option's flag data
@@ -230,12 +219,13 @@ function checkAnswer(selectedOption) {
       if (xhr.readyState === 4 && xhr.status === 200) {
         const flagHistory = xhr.responseText;
         // Display the flag history to the user
-        alert(`Flag History:\n${flagHistory}`);
-      }
+         alert(`Flag History:\n${flagHistory}`);
+       }
     };
     xhr.send();
   } else {
-    alert('Incorrect answer');
+    // Display a message indicating an incorrect answer
+    displayFlagHistory("Incorrect answer");
   }
 
   // Generate a new question
