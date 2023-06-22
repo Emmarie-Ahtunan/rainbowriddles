@@ -238,4 +238,4 @@ function checkAnswer(selectedOption) {
 // Add event listeners to the options
 const options = document.getElementsByClassName('option');
 for (let i = 0; i < options.length; i++) {
-  options[i].addEventListener('
+  options[i].addEventListener}
